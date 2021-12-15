@@ -7,14 +7,17 @@ import ReactPlayer from 'react-player'
 
 const useStyles = makeStyles(theme =>({
     card: {
-            width: 500,
+            width: 420,
             height: 300,
             alignItems: "center",
             padding : theme.spacing(3),
             margin : theme.spacing(3),
             background : "#e6ee9c",
-            border : `3px solid #ffc107`
-            
+            border : `3px solid #10245c`,
+            backgroundColor: 'rgb(210, 210, 235)'
+    },
+    btn:{
+        margin:'auto'
     }
 })) 
 
@@ -34,14 +37,7 @@ function SessionUI(props) {
     return (
         <Card className={classes.card}>
             <CardContent>  
-                {/* <CardMedia
-                    component="img"
-                    width="100%"
-                    height="140"
-                    image={props.videolink}
-                    alt={props.title}
-                /> */}
-                <ReactPlayer  controls width="400px" height="200px" url={props.videolink} sx={{}} />
+                <ReactPlayer  controls width="400px" height="200px" url={props.videolink}  />
             
                 <Typography variant="h5" component="div">
                    {props.title}
@@ -50,7 +46,6 @@ function SessionUI(props) {
                 <Typography variant="body2">
                     {props.sessiontext}
                 </Typography>
-
             </CardContent>
 
             {/* <CardActions>

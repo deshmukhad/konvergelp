@@ -45,7 +45,7 @@ function Courses() {
 				<Grid item xs={4} align="center">
 					<CardsUI
 						title={carditem.coursetitle}
-						cardtext={carditem.coursetext}
+						cardtext={carditem.cardtext}
 						imgsrc={carditem.imagename}
 						cardid={carditem.courseid}
 					/>

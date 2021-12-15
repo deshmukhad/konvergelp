@@ -1,42 +1,47 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { makeStyles, Grid } from '@material-ui/core';
+import { makeStyles, Grid, Button } from '@material-ui/core';
 //import {Card, CardActionArea, CardContent, CardMedia, CardActions} from '@material-ui/core'
 //import{Button, Typography, Box} from '@material-ui/core'
 import SessionUI from './SessionUI';
 //import { SesList } from './DataService'
-import { courseContext } from './GenContext';
+import { menuContext } from './GenContext';
 import axios from 'axios';
 
 const useStyles = makeStyles({
 	root: {
 		justifyContent: 'center',
 		display: 'flex',
-		flexDirection: 'column'
+		flexDirection: 'row'
+	},
+	btn: {
+		marginTop:'20px',
+		marginBottom: '20px',
 	}
 });
 
 function SessionList(props) {
 	const classes = useStyles();
 	const [ sessionList, setSessionList ] = useState([]);
+	const [ menuopt, setMenuopt ] = useContext(menuContext);
 	//const [courseid, setCourseid] = useContext(courseContext)
 
 	useEffect(() => {
 		async function getSession() {
 			console.log(props.courseid);
-			try 
-			{
+			try {
 				const response = await axios.get(`http://192.168.0.105:8081/getsessions/${props.courseid}`);
 				console.log(response.data);
 				setSessionList(response.data);
-			} 
-			catch (e) 
-			{
+			} catch (e) {
 				alert('Unable to get the Sessions');
 			}
 		}
 		getSession();
 	}, []);
 
+	const goback = () => {
+		setMenuopt(3);
+	};
 	return (
 		<Grid container alignItems="center" className={classes.root}>
 			{sessionList.map((sesList) => (
@@ -49,7 +54,9 @@ function SessionList(props) {
 					/>
 				</Grid>
 			))}
-
+			<Button size="Small" variant="contained" color="secondary" onClick={goback} className={classes.btn}>
+				GO BACK
+			</Button>
 			{/* {
                 SesList.map(sessionItem =>(
                     <Grid item xs={4} align="center">

@@ -60,7 +60,7 @@ function AppMenu()
 
 	return (
 		<div>
-			<AppBar position="static" color="inherit" style={{backgroundImage:`url("./Assets/navbg2.jpg")`,color:'white'}}>
+			<AppBar position="static" color="inherit" style={{backgroundImage:`url("./Assets/navbg1.jpg")`,color:'white'}}>
 				<Toolbar>
 					<IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
 						{/* <MenuIcon /> */}
