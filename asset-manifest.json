@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/konvergelp/static/css/main.cf36716e.chunk.css",
+    "main.js": "/konvergelp/static/js/main.4808df98.chunk.js",
+    "main.js.map": "/konvergelp/static/js/main.4808df98.chunk.js.map",
+    "runtime-main.js": "/konvergelp/static/js/runtime-main.7440d3bb.js",
+    "runtime-main.js.map": "/konvergelp/static/js/runtime-main.7440d3bb.js.map",
+    "static/js/2.604302a2.chunk.js": "/konvergelp/static/js/2.604302a2.chunk.js",
+    "static/js/2.604302a2.chunk.js.map": "/konvergelp/static/js/2.604302a2.chunk.js.map",
+    "static/js/3.f075954a.chunk.js": "/konvergelp/static/js/3.f075954a.chunk.js",
+    "static/js/3.f075954a.chunk.js.map": "/konvergelp/static/js/3.f075954a.chunk.js.map",
+    "index.html": "/konvergelp/index.html",
+    "static/css/main.cf36716e.chunk.css.map": "/konvergelp/static/css/main.cf36716e.chunk.css.map",
+    "static/js/2.604302a2.chunk.js.LICENSE.txt": "/konvergelp/static/js/2.604302a2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7440d3bb.js",
+    "static/js/2.604302a2.chunk.js",
+    "static/css/main.cf36716e.chunk.css",
+    "static/js/main.4808df98.chunk.js"
+  ]
+}
